@@ -3,7 +3,7 @@ import { ComingSoonPageComponent } from "./coming-soon-page.component";
 
 export const ComingSoonRoutes: Route[] = [
     {
-        path: 'comingsoon',
+        path: '',
         component: ComingSoonPageComponent
     }
 ]
