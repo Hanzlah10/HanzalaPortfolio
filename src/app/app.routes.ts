@@ -6,3 +6,4 @@ export const routes: Routes = [
         loadChildren: () => import('./coming-soon-page/comingSoon.routes').then(m => m.ComingSoonRoutes)
     }
 ];
+
