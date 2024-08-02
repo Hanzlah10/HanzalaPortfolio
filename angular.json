@@ -5,7 +5,17 @@
   "projects": {
     "HanzalaPortfolio": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/hanzala-portfolio",
+            "outputPath": "dist/hanz-portfolio",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -93,6 +103,6 @@
     }
   },
   "cli": {
-    "analytics": "82a011ac-2247-4e4a-b371-6bd05d6cf301"
+    "analytics": "d68d75ad-a01f-4de9-a015-ba0e8d91a43a"
   }
 }
