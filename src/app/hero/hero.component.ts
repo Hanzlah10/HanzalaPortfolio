@@ -15,7 +15,8 @@ export class HeroComponent {
     console.log("pdf");
 
 
-    const pdfUrl = 'https://firebasestorage.googleapis.com/v0/b/hanzalas-portfolio.appspot.com/o/Resume%2FMr.HanzalaSarguroh.pdf?alt=media&token=083bbdb5-cb2c-4900-8c56-442f6677b46f';
+    const pdfUrl = 'assets/resume.pdf';
+
     window.open(pdfUrl, '_blank');
   }
 
