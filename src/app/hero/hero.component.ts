@@ -12,12 +12,17 @@ export class HeroComponent {
 
 
   openPdf() {
-    console.log("pdf");
+    const resumeUrl = '/resume.pdf';
+    window.open(resumeUrl, '_blank');
 
+    // const pdfUrl = '/resume.pdf';
+    // const pdfUrl = 'public/resume.pdf';
 
-    const pdfUrl = 'assets/resume.pdf';
+    // window.open(pdfUrl, '_blank');
 
-    window.open(pdfUrl, '_blank');
+    // window.open('/resume.pdf', '_blank');
+    // const url = 'public/resume.pdf'; // Updated path
+    // window.open(url, '_blank');
   }
 
 
