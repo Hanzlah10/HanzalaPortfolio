@@ -16,6 +16,7 @@ export class LandingPageComponent {
   }
   projects$: Observable<projectsInterface[]> | null = null;
 
+
   loadProjects() {
     this.projects$ = this.projectsService.getAllProjects();
   }

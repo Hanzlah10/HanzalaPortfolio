@@ -15,6 +15,7 @@ import { HeroComponent } from './hero/hero.component';
 import { FooterComponent } from './footer/footer.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SingleProjectComponent } from './single-project/single-project.component';
+import { getStorage,provideStorage } from '@angular/fire/storage';
 
 @NgModule({
     declarations: [
@@ -34,7 +35,10 @@ import { SingleProjectComponent } from './single-project/single-project.componen
     providers: [
         provideFirebaseApp(() => initializeApp(environment.firebase)),
         provideAuth(() => getAuth()),
-        provideFirestore(() => getFirestore())],
+        provideFirestore(() => getFirestore()),
+        provideStorage(() => getStorage()),
+    ],
+
     bootstrap: [AppComponent]
 })
 export class AppModule { }

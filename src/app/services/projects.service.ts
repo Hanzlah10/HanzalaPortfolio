@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Firestore, collection, collectionData } from "@angular/fire/firestore";
+import { Firestore, collection, collectionData, doc, docData } from "@angular/fire/firestore";
 import { Observable } from "rxjs";
 import { projectsInterface } from "../types/project.interface";
 
@@ -14,5 +14,13 @@ export class ProjectsService {
         const projectsData = collection(this.firestore, 'projects');
         return collectionData(projectsData, { idField: 'id' });
     }
+
+
+
+    getSingleProject(id: string): Observable<any> {
+        const projectDocRef = doc(this.firestore, `projects/${id}`);
+        return docData(projectDocRef, { idField: 'id' });
+    }
+
 
 }   

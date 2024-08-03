@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from '@angular/router';
 import { ComingSoonPageComponent } from "./coming-soon-page/coming-soon-page.component";
 import { LandingPageComponent } from "./landing-page/landing-page.component";
+import { SingleProjectComponent } from "./single-project/single-project.component";
 
 export const routes: Routes = [
     {
@@ -11,6 +12,10 @@ export const routes: Routes = [
     {
         path: '',
         component: LandingPageComponent
+    },
+    {
+        path: 'projects/:id',
+        component: SingleProjectComponent
     },
     // {
     //     path: '**',
