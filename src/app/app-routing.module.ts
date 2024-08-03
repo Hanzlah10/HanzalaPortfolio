@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from '@angular/router';
 import { ComingSoonPageComponent } from "./coming-soon-page/coming-soon-page.component";
+import { LandingPageComponent } from "./landing-page/landing-page.component";
 
 export const routes: Routes = [
     {
@@ -8,12 +9,13 @@ export const routes: Routes = [
         component: ComingSoonPageComponent
     },
     {
-        path: '', redirectTo: 'ComingSoon', pathMatch: 'full'
+        path: '',
+        component: LandingPageComponent
     },
-    {
-        path: '**',
-        redirectTo: 'ComingSoon'
-    }
+    // {
+    //     path: '**',
+    //     redirectTo: 'ComingSoon'
+    // }
 
 ];
 
