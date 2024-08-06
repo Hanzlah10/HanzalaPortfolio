@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SingleProjectComponent } from './single-project/single-project.component';
 import { getStorage,provideStorage } from '@angular/fire/storage';
+import { ProjectCubeComponent } from './project-cube/project-cube.component';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import { getStorage,provideStorage } from '@angular/fire/storage';
         HeaderComponent,
         HeroComponent,
         FooterComponent,
-        SingleProjectComponent
+        SingleProjectComponent,
+        ProjectCubeComponent
     ],
     imports: [
         BrowserModule,
