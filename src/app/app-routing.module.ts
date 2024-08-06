@@ -9,18 +9,18 @@ export const routes: Routes = [
         path: 'ComingSoon',
         component: ComingSoonPageComponent
     },
-    {
-        path: '',
-        component: LandingPageComponent
-    },
-    {
-        path: 'projects/:id',
-        component: SingleProjectComponent
-    },
     // {
-    //     path: '**',
-    //     redirectTo: 'ComingSoon'
-    // }
+    //     path: '',
+    //     component: LandingPageComponent
+    // },
+    // {
+    //     path: 'projects/:id',
+    //     component: SingleProjectComponent
+    // },
+    {
+        path: '**',
+        redirectTo: 'ComingSoon'
+    }
 
 ];
 
