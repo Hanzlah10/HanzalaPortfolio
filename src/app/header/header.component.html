@@ -1,12 +1,48 @@
-<header class="bg-white p-4">
-    <div class="container mx-auto flex justify-between items-center">
-        <img src="../../assets/profilepic.jpg" alt="Logo" class="h-10 rounded-full">
-
-        <button class="md:hidden text-white">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-        </button>
+<nav class="bg-white dark:bg-black dark:text-white text-black shadow-lg transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <div class="flex items-center">
+                <a href="#" class="flex-shrink-0 relative group">
+                    <img class="h-12 w-12 rounded-full border-4 border-white dark:border-gray-700 transform transition-all duration-300 group-hover:rotate-12"
+                        src="../../assets/profilepic.jpg" alt="Logo">
+                    <div
+                        class="absolute -inset-0.5 bg-gradient-to-r opacity-5 from-pink-600 to-purple-600 rounded-full blur  group-hover:opacity-100 transition duration-300">
+                    </div>
+                </a>
+                <div class="hidden md:block ml-10">
+                    <div class="flex items-baseline space-x-6">
+                        <a href="#projects" class="nav-link">Projects</a>
+                        <a href="#skills" class="nav-link">Skills</a>
+                        <a href="#about" class="nav-link">About</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="dark:text-white text-black text-sm font-medium">
+                    <span class="animate-pulse">✨</span> Welcome to my portfolio <span class="animate-pulse">✨</span>
+                </div>
+                <button (click)="toggleDarkMode()"
+                    class="p-2 rounded-full bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-purple-500 focus:ring-white transition-all duration-300 hover:rotate-180">
+                    <svg *ngIf="!isDarkMode" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-500"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                    <svg *ngIf="isDarkMode" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-300"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
     </div>
-</header>
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+        <svg class="relative block w-full h-6" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+                d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                class="fill-current text-white dark:text-gray-900"></path>
+        </svg>
+    </div>
+</nav>
