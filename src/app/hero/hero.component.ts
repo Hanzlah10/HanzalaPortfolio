@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Storage, ref } from "@angular/fire/storage";
 
 @Component({
   selector: 'app-hero',
@@ -7,35 +6,27 @@ import { Storage, ref } from "@angular/fire/storage";
   styleUrl: './hero.component.css'
 })
 export class HeroComponent {
-  constructor(private storage: Storage) { }
+  constructor() { }
 
+  skills = [
+    { name: 'JavaScript', logo: 'assets/logos/javascript.svg' },
+    { name: 'TypeScript', logo: 'assets/logos/typescript.svg' },
+    { name: 'Python', logo: 'assets/logos/python.svg' },
+    { name: 'SQL', logo: 'assets/logos/sql.svg' },
+    { name: 'Angular', logo: 'assets/logos/angular.svg' },
+    { name: 'Ngrx', logo: 'assets/logos/ngrx.svg' },
+    { name: 'Node.js', logo: 'assets/logos/nodejs.svg' },
+    { name: 'TailwindCSS', logo: 'assets/logos/tailwindcss.svg' },
+    { name: 'AI/ML', logo: 'assets/logos/ai-ml.svg' },
+    { name: 'Ionic', logo: 'assets/logos/ionic.svg' },
+    { name: 'PrimeNG', logo: 'assets/logos/primeng.svg' },
+    { name: 'Firebase', logo: 'assets/logos/firebase.svg' },
+  ];
 
 
   openPdf() {
     const resumeUrl = '/resume.pdf';
     window.open(resumeUrl, '_blank');
 
-    // const pdfUrl = '/resume.pdf';
-    // const pdfUrl = 'public/resume.pdf';
-
-    // window.open(pdfUrl, '_blank');
-
-    // window.open('/resume.pdf', '_blank');
-    // const url = 'public/resume.pdf'; // Updated path
-    // window.open(url, '_blank');
   }
-
-
-
 }
-// openPdf() {
-//   const filePath = 'https://firebasestorage.googleapis.com/v0/b/hanzalas-portfolio.appspot.com/o/Resume%2FMr.HanzalaSarguroh.pdf?alt=media&token=083bbdb5-cb2c-4900-8c56-442f6677b46f';
-//   const storageRef = this.storage.ref(filePath);
-
-//   storageRef.getDownloadURL().subscribe((url: string) => {
-//     window.open(url, '_blank');
-//   }, (error) => {
-//     console.error('Error getting download URL:', error);
-//   });
-// }
-// }
