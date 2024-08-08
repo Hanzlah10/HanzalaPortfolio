@@ -1,0 +1,51 @@
+<ng-container *ngIf="projects$ | async as data">
+    <section class="h-screen w-full bg-black text-white overflow-hidden relative perspective-1000">
+        <div
+            class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 via-black to-black">
+        </div>
+
+        <!-- 3D rotating cube -->
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="cube-wrapper" #cubeWrapper>
+                <div class="cube" #cube>
+                    <div *ngFor="let project of data; let i = index" class="cube-face"
+                        [ngClass]="{'front': i === 0, 'back': i === 1, 'right': i === 2, 'left': i === 3, 'top': i === 4, 'bottom': i === 5}">
+                        <div class="w-full h-full bg-black bg-opacity-80 p-8 overflow-hidden">
+                            <h3 class="text-4xl font-bold mb-4 glitch" [attr.data-text]="project.name">{{ project.name
+                                }}</h3>
+                            <div class="relative h-48 mb-4 overflow-hidden rounded-lg">
+                                <img [src]="project.Images[0]" [alt]="project.name" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60">
+                                </div>
+                            </div>
+                            <p class="text-sm mb-4">{{ project.tagline }}</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span *ngFor="let tech of project.technologies.slice(0, 3)"
+                                    class="px-2 py-1 text-xs bg-purple-800 rounded-full">
+                                    {{ tech }}
+                                </span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a [href]="project.github_link"
+                                    class="px-4 py-2 bg-purple-600 rounded-full text-sm">GitHub</a>
+                                <a [href]="project.live_link" class="px-4 py-2 bg-pink-600 rounded-full text-sm">Live
+                                    Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation controls -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-4">
+            <button (click)="rotateCube('left')" class="px-4 py-2 bg-purple-600 rounded-full text-sm">Previous</button>
+            <button (click)="rotateCube('right')" class="px-4 py-2 bg-purple-600 rounded-full text-sm">Next</button>
+        </div>
+
+        <!-- Project counter -->
+        <div class="absolute top-10 left-1/2 transform -translate-x-1/2 text-2xl font-bold">
+            Project <span class="text-purple-500">{{ currentFace + 1 }}</span> of {{ data.length }}
+        </div>
+    </section>
+</ng-container>
