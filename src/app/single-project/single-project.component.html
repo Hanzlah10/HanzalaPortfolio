@@ -88,7 +88,7 @@
                         </svg>
                         View on GitHub
                     </a>
-                    <a [href]="project.live_link" target="_blank" rel="noopener noreferrer"
+                    <a *ngIf="project.live_link" [href]="project.live_link" target="_blank" rel="noopener noreferrer"
                         class="flex-1 max-w-xs bg-indigo-600 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:bg-indigo-700 hover:scale-105 flex items-center justify-center">
                         <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
