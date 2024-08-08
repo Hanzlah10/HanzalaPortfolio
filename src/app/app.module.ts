@@ -15,8 +15,9 @@ import { HeroComponent } from './hero/hero.component';
 import { FooterComponent } from './footer/footer.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SingleProjectComponent } from './single-project/single-project.component';
-import { getStorage,provideStorage } from '@angular/fire/storage';
+import { getStorage, provideStorage } from '@angular/fire/storage';
 import { ProjectCubeComponent } from './project-cube/project-cube.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
     declarations: [
@@ -33,6 +34,7 @@ import { ProjectCubeComponent } from './project-cube/project-cube.component';
         BrowserModule,
         CommonModule,
         AppRoutingModule,
+        SlickCarouselModule,
     ],
     providers: [
         provideFirebaseApp(() => initializeApp(environment.firebase)),

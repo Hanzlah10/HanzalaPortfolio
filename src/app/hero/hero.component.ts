@@ -17,7 +17,7 @@ export class HeroComponent {
     { name: 'Ngrx', logo: 'assets/logos/ngrx.svg' },
     { name: 'Node.js', logo: 'assets/logos/nodejs.svg' },
     { name: 'TailwindCSS', logo: 'assets/logos/tailwindcss.svg' },
-    { name: 'AI/ML', logo: 'assets/logos/ai-ml.svg' },
+    { name: 'AI/ML', logo: 'assets/logos/ai-ml.png' },
     { name: 'Ionic', logo: 'assets/logos/ionic.svg' },
     { name: 'PrimeNG', logo: 'assets/logos/primeng.svg' },
     { name: 'Firebase', logo: 'assets/logos/firebase.svg' },
