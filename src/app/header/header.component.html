@@ -1,22 +1,7 @@
 <nav class="bg-white dark:bg-black dark:text-white text-black shadow-lg transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
-            <!-- <div class="flex items-center">
-                <a href="#" class="flex-shrink-0 relative group">
-                    <img class="h-12 w-12 rounded-full border-4 border-white dark:border-gray-700 transform transition-all duration-300 group-hover:rotate-12"
-                        src="../../assets/profilepic.jpg" alt="Logo">
-                   
-                </a>
-                 <div class="hidden md:block ml-10">
-                    <div class="flex items-baseline space-x-6">
-                        <a href="#projects" class="nav-link">Projects</a>
-                        <a href="#skills" class="nav-link">Skills</a>
-                        <a href="#about" class="nav-link">About</a>
-                    </div>
-                </div> 
-            </div> -->
-
-            <div class="flex space-x-6 z-10">
+            <div class="flex space-x-6 z-10 items-center">
                 <a href="https://github.com/hanzlah10" target="_blank" rel="noopener noreferrer"
                     class="text-black dark:text-white hover:text-gray-400 dark:hover:text-gray-700 transition-colors duration-300">
                     <span class="sr-only">GitHub</span>
@@ -36,13 +21,14 @@
             </div>
 
             <div class="flex items-center space-x-4">
-                <div class="dark:text-white text-black text-sm font-medium">
-                    <span class="animate-pulse">✨</span> Welcome to my portfolio <span class="animate-pulse">✨</span>
+                <div class="dark:text-white text-black text-sm font-medium hidden sm:block ">
+                    <span class="animate-pulse">✨</span> Welcome to my Portfolio <span class="animate-pulse">✨</span>
                 </div>
                 <button (click)="toggleDarkMode()"
-                    class="p-2 rounded-full z-10 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-purple-500 focus:ring-white transition-all duration-700 hover:rotate-180">
-                    <svg *ngIf="!isDarkMode" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-500"
-                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    class="p-2 rounded-full z-10 bg-white dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-purple-500 dark:focus:ring-offset-indigo-500 focus:ring-white transition-all duration-700 hover:rotate-180">
+                    <svg *ngIf="!isDarkMode" xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6 text-purple-500 dark:text-indigo-500" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                     </svg>

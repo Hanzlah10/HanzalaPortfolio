@@ -2,13 +2,16 @@
     <div class="min-h-screen w-full bg-white dark:bg-black transition-colors duration-300">
         <div class="container mx-auto px-4 py-12">
             <button routerLink="/"
-                class="mb-8 text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors duration-300 flex items-center">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
+                class="mb-8 text-purple-600 dark:text-indigo-400 hover:text-purple-800 dark:hover:text-indigo-200 transition-colors duration-300 flex items-center group">
+                <svg class="w-5 h-5 mr-2 transform transition-transform duration-300 group-hover:-translate-x-1"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                 </svg>
-                Back to Projects </button>
+                <span
+                    class="text-lg font-medium border-b-2 border-transparent group-hover:border-purple-600 dark:group-hover:border-indigo-400 transition-all duration-300">Back
+                    to Projects</span>
+            </button>
 
             <div class="space-y-12">
                 <div class="text-center">
@@ -93,7 +96,7 @@
                         View on GitHub
                     </a>
                     <a *ngIf="project.live_link" [href]="project.live_link" target="_blank" rel="noopener noreferrer"
-                        class="flex-1 max-w-xs bg-indigo-600 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:bg-indigo-700 hover:scale-105 flex items-center justify-center">
+                        class="flex-1 max-w-xs bg-purple-600 dark:bg-indigo-600 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:bg-purple-700 dark:hover:bg-indigo-700 hover:scale-105 flex items-center justify-center">
                         <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
