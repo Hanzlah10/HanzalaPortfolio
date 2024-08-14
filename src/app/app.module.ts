@@ -18,6 +18,7 @@ import { SingleProjectComponent } from './single-project/single-project.componen
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { ProjectCubeComponent } from './project-cube/project-cube.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -35,6 +36,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
         CommonModule,
         AppRoutingModule,
         SlickCarouselModule,
+        BrowserAnimationsModule
     ],
     providers: [
         provideFirebaseApp(() => initializeApp(environment.firebase)),

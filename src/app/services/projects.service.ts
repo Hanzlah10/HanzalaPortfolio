@@ -22,5 +22,15 @@ export class ProjectsService {
         return docData(projectDocRef, { idField: 'id' });
     }
 
+    incrementViews() {
+        const viewsRef = doc(this.firestore, 'views', '001')
 
-}   
+    }
+
+    getViews() {
+        const viewsRef = doc(this.firestore, 'Views/001');
+        console.log(viewsRef);
+
+        return docData(viewsRef, { idField: 'id' });
+    }
+}  
