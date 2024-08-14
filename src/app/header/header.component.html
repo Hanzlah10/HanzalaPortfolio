@@ -4,7 +4,7 @@
             <div class="flex items-center space-x-6">
 
                 <span *ngIf="views$ | async  as data"
-                    class="inline-flex items-center justify-center w-7 h-7 text-sm font-semibold bg-purple-600 dark:bg-indigo-600 text-white rounded-full">
+                    class="inline-flex items-center justify-center min-w-7 w-fit h-7 px-1 text-sm font-semibold bg-purple-600 dark:bg-indigo-600 text-white rounded-full">
                     {{ data.viewsCount }}
                 </span>
                 <a href="https://github.com/hanzlah10" target="_blank" rel="noopener noreferrer"
