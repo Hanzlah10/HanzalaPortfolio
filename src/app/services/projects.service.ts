@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Firestore, collection, collectionData, doc, docData } from "@angular/fire/firestore";
+import { Firestore, collection, collectionData, doc, docData, runTransaction } from "@angular/fire/firestore";
 import { Observable } from "rxjs";
 import { projectsInterface } from "../types/project.interface";
 
@@ -22,5 +22,26 @@ export class ProjectsService {
         return docData(projectDocRef, { idField: 'id' });
     }
 
+    incrementViews() {
+        const docRef = doc(this.firestore, `Views/001}`);
 
-}   
+        return runTransaction(this.firestore, async (transaction) => {
+            const docSnap = await transaction.get(docRef);
+            if (!docSnap.exists()) {
+                transaction.set(docRef, { viewsCount: 1 });
+            } else {
+                const newCount = (docSnap.data()["viewsCount"] || 0) + 1;
+                transaction.update(docRef, { viewsCount: newCount });
+            }
+        }).then(() => {
+            console.log('Views count incremented');
+        }).catch((error) => {
+            console.error('Error incrementing views count:', error);
+        });
+    }
+
+    getViews() {
+        const viewsRef = doc(this.firestore, 'Views/001');
+        return docData(viewsRef, { idField: 'id' });
+    }
+}  
